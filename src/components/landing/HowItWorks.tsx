@@ -1,7 +1,7 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
-import { Camera, Search, Handshake } from "lucide-react";
+import { Camera, Search, Handshake, Wrench } from "lucide-react";
 
 const stepIcons = [Camera, Search, Handshake];
 const stepColors = ["bg-primary text-primary-foreground", "bg-secondary text-secondary-foreground", "bg-accent text-accent-foreground"];
@@ -67,7 +67,10 @@ export default function HowItWorks() {
           transition={{ delay: 0.7 }}
           className="mx-auto mt-10 max-w-3xl rounded-xl bg-lynk-blue-light border border-secondary/10 p-4"
         >
-          <p className="text-xs text-muted-foreground leading-relaxed">{t("how.disclaimer")}</p>
+          <div className="flex items-start gap-2 text-muted-foreground">
+            <Wrench className="h-4 w-4 mt-0.5 text-secondary" />
+            <p className="text-xs leading-relaxed">{t("how.disclaimer")}</p>
+          </div>
           <a href="/sin-recargos" className="mt-3 inline-flex text-xs font-semibold text-secondary hover:text-secondary/80">
             {t("how.surcharge_link")}
           </a>

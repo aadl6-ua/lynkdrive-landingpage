@@ -2,7 +2,7 @@ import { useLang } from "@/contexts/LanguageContext";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Rocket, Info } from "lucide-react";
+import { Rocket, Info, Flame, AlertTriangle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -30,7 +30,7 @@ export default function CtaSection() {
 
   const confirmSubmit = () => {
     console.log("Lead captured:", { email, name, role });
-    alert("🎉 ¡Plaza reservada! / Spot reserved!");
+    alert("¡Plaza reservada! / Spot reserved!");
     setEmail("");
     setName("");
     setGdpr(false);
@@ -50,8 +50,9 @@ export default function CtaSection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               {t("cta2.title")}
             </h2>
-            <p className="text-primary-foreground/70 text-sm font-medium mb-8">
-              🔥 {t("cta2.urgency")}
+            <p className="text-primary-foreground/70 text-sm font-medium mb-8 flex items-center justify-center gap-2">
+              <Flame className="h-4 w-4" />
+              {t("cta2.urgency")}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
@@ -98,7 +99,7 @@ export default function CtaSection() {
                 />
                 <span className="text-xs text-primary-foreground/70 leading-relaxed">
                   {t("cta2.gdpr_label")}{" "}
-                  <a href="#privacy" className="underline">lynkdrive.es/privacidad</a>
+                   <a href="/privacidad" className="underline">lynkdrive.es/privacidad</a>
                 </span>
               </label>
 
@@ -113,9 +114,12 @@ export default function CtaSection() {
 
             {/* Beta disclaimer */}
             <div className="mt-6 rounded-xl bg-white/5 border border-white/10 p-4">
-              <p className="text-xs text-primary-foreground/50 leading-relaxed">
-                {t("disclaimer.beta")}
-              </p>
+              <div className="flex items-start gap-2 text-primary-foreground/50">
+                <AlertTriangle className="h-4 w-4 mt-0.5" />
+                <p className="text-xs leading-relaxed">
+                  {t("disclaimer.beta")}
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

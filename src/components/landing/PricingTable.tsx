@@ -41,6 +41,9 @@ export default function PricingTable() {
         >
           {t("pricing.title")}
         </motion.h2>
+        <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-muted-foreground">
+          {t("pricing.subtitle")}
+        </p>
 
         <div className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
           {plans.map((plan, i) => (
@@ -71,6 +74,46 @@ export default function PricingTable() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl rounded-2xl border bg-card p-6">
+          <h3 className="font-display text-lg font-bold mb-4">{t("pricing.age_title")}</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="text-left text-muted-foreground">
+                <tr>
+                  <th className="py-2">{t("pricing.age_head_age")}</th>
+                  <th className="py-2">{t("pricing.age_head_franchise")}</th>
+                  <th className="py-2">{t("pricing.age_head_deposit")}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y">
+                <tr>
+                  <td className="py-2 font-medium">{t("pricing.age_row_18_20")}</td>
+                  <td className="py-2">{t("pricing.age_row_18_20_franchise")}</td>
+                  <td className="py-2">{t("pricing.age_row_18_20_deposit")}</td>
+                </tr>
+                <tr>
+                  <td className="py-2 font-medium">{t("pricing.age_row_21_24")}</td>
+                  <td className="py-2">{t("pricing.age_row_21_24_franchise")}</td>
+                  <td className="py-2">{t("pricing.age_row_21_24_deposit")}</td>
+                </tr>
+                <tr>
+                  <td className="py-2 font-medium">{t("pricing.age_row_25_plus")}</td>
+                  <td className="py-2">{t("pricing.age_row_25_plus_franchise")}</td>
+                  <td className="py-2">{t("pricing.age_row_25_plus_deposit")}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 text-sm text-muted-foreground">
+            <span className="font-medium text-foreground">{t("pricing.plus_title")}</span>
+            <span className="ml-2">{t("pricing.plus_desc")}</span>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">{t("pricing.base_note")}</p>
+          <a href="/sin-recargos" className="mt-3 inline-flex text-xs font-semibold text-secondary hover:text-secondary/80">
+            {t("pricing.surcharge_link")}
+          </a>
         </div>
       </div>
     </section>

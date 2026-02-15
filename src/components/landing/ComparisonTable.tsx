@@ -1,7 +1,7 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { BadgePercent, Check, X } from "lucide-react";
 
 export default function ComparisonTable() {
   const { t } = useLang();
@@ -73,7 +73,10 @@ export default function ComparisonTable() {
           transition={{ delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl rounded-xl bg-lynk-orange-light border border-primary/10 p-4"
         >
-          <p className="text-xs text-muted-foreground leading-relaxed">{t("comp.disclaimer")}</p>
+          <div className="flex items-start gap-2 text-muted-foreground">
+            <BadgePercent className="h-4 w-4 mt-0.5 text-primary" />
+            <p className="text-xs leading-relaxed">{t("comp.disclaimer")}</p>
+          </div>
         </motion.div>
       </div>
     </section>

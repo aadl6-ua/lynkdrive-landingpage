@@ -1,5 +1,5 @@
 import { useLang } from "@/contexts/LanguageContext";
-import { Car, Shield, Lock, CreditCard } from "lucide-react";
+import { Car, Shield, Lock, CreditCard, GraduationCap, Scale } from "lucide-react";
 
 export default function Footer() {
   const { t } = useLang();
@@ -18,29 +18,38 @@ export default function Footer() {
     <footer className="border-t bg-foreground text-background">
       <div className="container mx-auto px-4 py-12">
         {/* Trust logos */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
-          {["eIDAS", "GDPR", "Stripe", "UA"].map((logo) => (
+        <div className="flex flex-wrap items-center justify-center gap-6 mb-4">
+          {["eIDAS", "GDPR", "Stripe", "UA (TFG)"].map((logo) => (
             <div key={logo} className="flex items-center gap-1.5 rounded-full border border-background/20 px-4 py-2 text-xs font-medium text-background/70">
               {logo === "eIDAS" && <Shield className="h-3.5 w-3.5" />}
               {logo === "GDPR" && <Lock className="h-3.5 w-3.5" />}
               {logo === "Stripe" && <CreditCard className="h-3.5 w-3.5" />}
-              {logo === "UA" && <span className="font-bold">🎓</span>}
+              {logo === "UA (TFG)" && <GraduationCap className="h-3.5 w-3.5" />}
               {logo}
             </div>
           ))}
         </div>
+        <p className="mb-10 text-[11px] text-background/40 text-center">
+          Indicadores previstos para el MVP.
+        </p>
 
         {/* Disclaimers */}
         <div className="mx-auto max-w-3xl space-y-4 mb-10">
           <div className="rounded-xl bg-background/5 border border-background/10 p-4">
-            <p className="text-xs text-background/50 leading-relaxed">{t("footer.responsibility")}</p>
+            <div className="flex items-start gap-2 text-background/50">
+              <Scale className="h-4 w-4 mt-0.5" />
+              <p className="text-xs leading-relaxed">{t("footer.responsibility")}</p>
+            </div>
           </div>
           <div className="rounded-xl bg-background/5 border border-background/10 p-4">
-            <p className="text-xs text-background/50 leading-relaxed">
-              {t("footer.gdpr")}
-              <br />
-              <a href="/privacidad" className="underline text-background/60 mt-1 inline-block">{t("footer.privacy_link")}</a>
-            </p>
+            <div className="flex items-start gap-2 text-background/50">
+              <Lock className="h-4 w-4 mt-0.5" />
+              <p className="text-xs leading-relaxed">
+                {t("footer.gdpr")}
+                <br />
+                <a href="/privacidad" className="underline text-background/60 mt-1 inline-block">{t("footer.privacy_link")}</a>
+              </p>
+            </div>
           </div>
         </div>
 

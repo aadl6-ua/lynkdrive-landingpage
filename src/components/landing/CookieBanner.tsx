@@ -1,5 +1,5 @@
 import { useLang } from "@/contexts/LanguageContext";
-import { X } from "lucide-react";
+import { Cookie, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function CookieBanner() {
@@ -22,9 +22,12 @@ export default function CookieBanner() {
     <div className="fixed bottom-0 inset-x-0 z-[60] p-4 md:p-6">
       <div className="mx-auto max-w-3xl rounded-2xl border bg-card/95 backdrop-blur-md p-5 shadow-2xl">
         <div className="flex items-start gap-3">
-          <p className="flex-1 text-sm text-muted-foreground leading-relaxed">
-            {t("cookie.text")}
-          </p>
+          <div className="flex flex-1 items-start gap-2">
+            <Cookie className="h-4 w-4 mt-0.5 text-muted-foreground" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {t("cookie.text")}
+            </p>
+          </div>
           <button onClick={() => handle("reject")} className="text-muted-foreground hover:text-foreground">
             <X className="h-4 w-4" />
           </button>

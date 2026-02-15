@@ -1,7 +1,7 @@
 import { useLang } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, TrendingDown, Wallet, Users } from "lucide-react";
+import { MapPin, TrendingDown, Wallet, Users, AlertTriangle } from "lucide-react";
 import heroImage from "@/assets/hero-lynkdrive.jpg";
 
 export default function HeroSection() {
@@ -14,7 +14,7 @@ export default function HeroSection() {
     // TODO: Connect to backend (Mailchimp/Supabase)
     // Example: await fetch('/api/leads', { method: 'POST', body: JSON.stringify({ email, role }) })
     console.log("Lead captured:", { email, role });
-    alert("🎉 ¡Te has unido! / You're in!");
+    alert("¡Te has unido! / You're in!");
     setEmail("");
   };
 
@@ -109,9 +109,12 @@ export default function HeroSection() {
             transition={{ delay: 0.8 }}
             className="mt-8 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-4"
           >
-            <p className="text-xs text-white/50 leading-relaxed">
-              {t("disclaimer.beta")}
-            </p>
+            <div className="flex items-start gap-2 text-white/50">
+              <AlertTriangle className="h-4 w-4 mt-0.5" />
+              <p className="text-xs leading-relaxed">
+                {t("disclaimer.beta")}
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
