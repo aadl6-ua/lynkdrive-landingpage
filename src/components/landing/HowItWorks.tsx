@@ -68,6 +68,9 @@ export default function HowItWorks() {
           className="mx-auto mt-10 max-w-3xl rounded-xl bg-lynk-blue-light border border-secondary/10 p-4"
         >
           <p className="text-xs text-muted-foreground leading-relaxed">{t("how.disclaimer")}</p>
+          <a href="/sin-recargos" className="mt-3 inline-flex text-xs font-semibold text-secondary hover:text-secondary/80">
+            {t("how.surcharge_link")}
+          </a>
         </motion.div>
       </div>
     </section>

@@ -5,10 +5,13 @@ export default function Footer() {
   const { t } = useLang();
 
   const links = [
-    { label: t("footer.how"), href: "#how-it-works" },
-    { label: t("footer.legal"), href: "#" },
-    { label: t("footer.privacy"), href: "#privacy" },
-    { label: t("footer.contact"), href: "mailto:info@lynkdrive.es" },
+    { label: t("footer.home"), href: "/" },
+    { label: t("footer.surcharge"), href: "/sin-recargos" },
+    { label: t("footer.market"), href: "/mercado" },
+    { label: t("footer.viability"), href: "/viabilidad" },
+    { label: t("footer.legal"), href: "/legal" },
+    { label: t("footer.privacy"), href: "/privacidad" },
+    { label: t("footer.contact"), href: "mailto:alvaroandresdelamo@gmail.com" },
   ];
 
   return (
@@ -36,7 +39,7 @@ export default function Footer() {
             <p className="text-xs text-background/50 leading-relaxed">
               {t("footer.gdpr")}
               <br />
-              <a href="#privacy" className="underline text-background/60 mt-1 inline-block">{t("footer.privacy_link")}</a>
+              <a href="/privacidad" className="underline text-background/60 mt-1 inline-block">{t("footer.privacy_link")}</a>
             </p>
           </div>
         </div>

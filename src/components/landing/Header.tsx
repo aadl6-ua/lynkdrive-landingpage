@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <a href="#" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
+        <a href="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-tight">
           <Car className="h-6 w-6 text-primary" />
           <span>LYNK<span className="text-primary">DRIVE</span></span>
         </a>

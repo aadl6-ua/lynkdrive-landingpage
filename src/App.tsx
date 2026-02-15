@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Mercado from "./pages/Mercado";
+import Viabilidad from "./pages/Viabilidad";
+import Legal from "./pages/Legal";
+import Privacidad from "./pages/Privacidad";
+import SinRecargos from "./pages/SinRecargos";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +23,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/mercado" element={<Mercado />} />
+            <Route path="/viabilidad" element={<Viabilidad />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/sin-recargos" element={<SinRecargos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
