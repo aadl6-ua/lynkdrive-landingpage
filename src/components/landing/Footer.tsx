@@ -7,6 +7,7 @@ export default function Footer() {
   const links = [
     { label: t("footer.home"), href: "/" },
     { label: t("footer.surcharge"), href: "/sin-recargos" },
+    { label: t("footer.profiles"), href: "/perfiles" },
     { label: t("footer.market"), href: "/mercado" },
     { label: t("footer.viability"), href: "/viabilidad" },
     { label: t("footer.legal"), href: "/legal" },

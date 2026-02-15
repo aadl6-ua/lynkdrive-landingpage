@@ -15,6 +15,7 @@ const Privacidad = () => {
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{t("privacy.label")}</p>
             <h1 className="mt-3 text-3xl md:text-4xl font-display font-bold">{t("privacy.title")}</h1>
             <p className="mt-4 text-muted-foreground">{t("privacy.subtitle")}</p>
+            <p className="mt-2 text-xs text-muted-foreground">{t("privacy.updated")}</p>
           </div>
 
           <div className="mt-10 grid gap-8">
@@ -45,6 +46,21 @@ const Privacidad = () => {
             <section className="rounded-2xl border bg-card p-6">
               <h2 className="text-xl font-semibold">{t("privacy.section5.title")}</h2>
               <p className="mt-3 text-sm text-muted-foreground">{t("privacy.section5.desc")}</p>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("privacy.section6.title")}</h2>
+              <p className="mt-3 text-sm text-muted-foreground">{t("privacy.section6.desc")}</p>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("privacy.section7.title")}</h2>
+              <p className="mt-3 text-sm text-muted-foreground">{t("privacy.section7.desc")}</p>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("privacy.section8.title")}</h2>
+              <p className="mt-3 text-sm text-muted-foreground">{t("privacy.section8.desc")}</p>
             </section>
           </div>
         </div>

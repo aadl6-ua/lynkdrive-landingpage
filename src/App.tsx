@@ -11,6 +11,7 @@ import Viabilidad from "./pages/Viabilidad";
 import Legal from "./pages/Legal";
 import Privacidad from "./pages/Privacidad";
 import SinRecargos from "./pages/SinRecargos";
+import Perfiles from "./pages/Perfiles";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacidad" element={<Privacidad />} />
             <Route path="/sin-recargos" element={<SinRecargos />} />
+            <Route path="/perfiles" element={<Perfiles />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

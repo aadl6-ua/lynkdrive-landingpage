@@ -55,6 +55,37 @@ const Viabilidad = () => {
                 </table>
               </div>
               <p className="mt-3 text-xs text-muted-foreground">{t("viability.table1.note")}</p>
+              <div className="mt-2 text-xs text-muted-foreground">
+                {t("viability.table1.base_note")}{" "}
+                <a href="/sin-recargos" className="font-semibold text-secondary hover:text-secondary/80">
+                  {t("viability.table1.link")}
+                </a>
+              </div>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("viability.section_costs.title")}</h2>
+              <div className="mt-4 grid gap-6 text-sm text-muted-foreground">
+                <div>
+                  <p className="font-semibold text-foreground">{t("viability.section_costs.eliminated_title")}</p>
+                  <ul className="mt-2 space-y-1">
+                    <li>{t("viability.section_costs.eliminated_item1")}</li>
+                    <li>{t("viability.section_costs.eliminated_item2")}</li>
+                    <li>{t("viability.section_costs.eliminated_item3")}</li>
+                    <li>{t("viability.section_costs.eliminated_item4")}</li>
+                    <li>{t("viability.section_costs.eliminated_item5")}</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">{t("viability.section_costs.reduced_title")}</p>
+                  <ul className="mt-2 space-y-1">
+                    <li>{t("viability.section_costs.reduced_item1")}</li>
+                    <li>{t("viability.section_costs.reduced_item2")}</li>
+                    <li>{t("viability.section_costs.reduced_item3")}</li>
+                    <li>{t("viability.section_costs.reduced_item4")}</li>
+                  </ul>
+                </div>
+              </div>
             </section>
 
             <section className="rounded-2xl border bg-card p-6">
@@ -89,6 +120,7 @@ const Viabilidad = () => {
                 </table>
               </div>
               <p className="mt-3 text-xs text-muted-foreground">{t("viability.table2.note")}</p>
+              <p className="mt-2 text-xs text-muted-foreground">{t("viability.section2.benchmark")}</p>
             </section>
 
             <section className="rounded-2xl border bg-card p-6">
@@ -136,6 +168,56 @@ const Viabilidad = () => {
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("viability.section_validation.title")}</h2>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>{t("viability.section_validation.item1")}</li>
+                <li>{t("viability.section_validation.item2")}</li>
+                <li>{t("viability.section_validation.item3")}</li>
+                <li>{t("viability.section_validation.item4")}</li>
+                <li>{t("viability.section_validation.item5")}</li>
+                <li>{t("viability.section_validation.item6")}</li>
+                <li>{t("viability.section_validation.item7")}</li>
+              </ul>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("viability.section_projection.title")}</h2>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="text-left text-muted-foreground">
+                    <tr>
+                      <th className="py-2">{t("viability.section_projection.head.phase")}</th>
+                      <th className="py-2">{t("viability.section_projection.head.cost")}</th>
+                      <th className="py-2">{t("viability.section_projection.head.result")}</th>
+                      <th className="py-2">{t("viability.section_projection.head.revenue")}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    <tr>
+                      <td className="py-2">{t("viability.section_projection.row1.phase")}</td>
+                      <td className="py-2">{t("viability.section_projection.row1.cost")}</td>
+                      <td className="py-2">{t("viability.section_projection.row1.result")}</td>
+                      <td className="py-2">{t("viability.section_projection.row1.revenue")}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2">{t("viability.section_projection.row2.phase")}</td>
+                      <td className="py-2">{t("viability.section_projection.row2.cost")}</td>
+                      <td className="py-2">{t("viability.section_projection.row2.result")}</td>
+                      <td className="py-2">{t("viability.section_projection.row2.revenue")}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2">{t("viability.section_projection.row3.phase")}</td>
+                      <td className="py-2">{t("viability.section_projection.row3.cost")}</td>
+                      <td className="py-2">{t("viability.section_projection.row3.result")}</td>
+                      <td className="py-2">{t("viability.section_projection.row3.revenue")}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-xs text-muted-foreground">{t("viability.section_projection.note")}</p>
             </section>
           </div>
         </div>

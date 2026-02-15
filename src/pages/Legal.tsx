@@ -15,6 +15,7 @@ const Legal = () => {
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{t("legal.label")}</p>
             <h1 className="mt-3 text-3xl md:text-4xl font-display font-bold">{t("legal.title")}</h1>
             <p className="mt-4 text-muted-foreground">{t("legal.subtitle")}</p>
+            <p className="mt-2 text-xs text-muted-foreground">{t("legal.updated")}</p>
           </div>
 
           <div className="mt-10 grid gap-8">
@@ -44,6 +45,16 @@ const Legal = () => {
             <section className="rounded-2xl border bg-card p-6">
               <h2 className="text-xl font-semibold">{t("legal.section4.title")}</h2>
               <p className="mt-3 text-sm text-muted-foreground">{t("legal.section4.desc")}</p>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("legal.section5.title")}</h2>
+              <p className="mt-3 text-sm text-muted-foreground">{t("legal.section5.desc")}</p>
+            </section>
+
+            <section className="rounded-2xl border bg-card p-6">
+              <h2 className="text-xl font-semibold">{t("legal.section6.title")}</h2>
+              <p className="mt-3 text-sm text-muted-foreground">{t("legal.section6.desc")}</p>
             </section>
           </div>
         </div>
